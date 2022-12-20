@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import {CalendarOutlined} from "@ant-design/icons";
-import { Breadcrumb, Layout, Menu, theme } from "antd";
+import { Layout, Menu, theme } from "antd";
+import { Route, Routes, useNavigate } from "react-router-dom";
+
 import Anticlotting from "./components/diseases/Anticlotting";
 import Gastritis from "./components/diseases/Gastritis";
 import Nutrient from "./components/diseases/Nutrient";
 import Vitamin from "./components/diseases/Vitamin";
 import Calender from "./components/calender/Calender";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import "./App.css";
-const { Header, Content, Footer, Sider } = Layout;
 
+import "./App.css";
+
+const { Header, Content, Footer, Sider } = Layout;
 
 const App = () => {
   const navigate = useNavigate()
   const items = [
- 
     {
       key: 'dashboard',
       icon: <CalendarOutlined />,
@@ -65,14 +66,7 @@ const App = () => {
             margin: "0 16px",
           }}
         >
-          <Breadcrumb
-            style={{
-              margin: "16px 0",
-            }}
-          >
-            <Breadcrumb.Item>User</Breadcrumb.Item>
-            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-          </Breadcrumb>
+         
           <div
             style={{
               padding: 24,
@@ -87,7 +81,6 @@ const App = () => {
               <Route path="/nutr" element={<Nutrient />} />
               <Route path="/vita" element={<Vitamin />} />
             </Routes>
-
             {/* <Anticlotting/> */}
           </div>
         </Content>

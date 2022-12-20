@@ -17,6 +17,8 @@ function Calender() {
     "Nov",
     "Dec",
   ]);
+
+  //handle navigation
   const treat1View = () => {
     navlink("/gast");
   };
@@ -72,7 +74,6 @@ function Calender() {
                 <button onClick={treat2View}>View Details</button>{" "}
               </span>
             </td>
-
             <td></td>
             <td></td>
             <td></td>
